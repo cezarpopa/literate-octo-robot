@@ -1,3 +1,4 @@
 (define (compose f g)
-	(lambda args
-		(f (apply g args))))
+	(define (the-composition . args)
+		(f (apply g args)))
+	the-composition)
